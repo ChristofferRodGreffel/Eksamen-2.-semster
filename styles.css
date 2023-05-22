@@ -167,16 +167,18 @@ nav img {
   margin: auto;
   width: 90%;
 }
-.event-card div h3 {
-  margin-top: 50px;
-  font-size: 30pt;
+.event-card div h2 {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18pt;
 }
 .event-card div a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  margin-top: 20px;
+
   height: 40px;
   font-size: 15pt;
   font-weight: 900;

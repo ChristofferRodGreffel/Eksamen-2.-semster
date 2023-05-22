@@ -272,6 +272,16 @@ footer {
   padding: 3vh 0vh 3vh 0vh;
 }
 
+footer div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer div a {
+  text-decoration: none;
+  color: white;
+}
+
 footer h4 {
   padding-bottom: 1vh;
 }
@@ -283,7 +293,6 @@ footer h4 {
 }
 
 #footer-betingelser a {
-  text-decoration: none;
   color: #fdf7f0;
 }
 
@@ -296,6 +305,13 @@ footer h4 {
   color: #fdf7f0;
 }
 
+.footer-sociale p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .footer-sociale .fa-brands {
-  font-size: 2.5vh;
+  font-size: 20px;
 }

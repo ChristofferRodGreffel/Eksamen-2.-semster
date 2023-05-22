@@ -100,3 +100,44 @@ nav img {
   height: 85vh;
   width: 50vw;
 }
+
+/* Ignorer dette */
+main{ 
+padding-bottom: 10%;}
+
+/* --FOOTER STYLES------------------------------------- */
+footer{ 
+  display: flex;
+  justify-content: space-around;
+  background-color: #7a6b3f;
+  color: #FDF7F0;
+  padding: 3vh 0vh 3vh 0vh;
+}
+
+footer h4{ 
+  padding-bottom: 1vh;
+}
+
+/* Denne div lagde sig vandret, derfor flex columme */
+#footer-betingelser{
+  display:flex;
+  flex-direction: column;
+}
+
+#footer-betingelser a{
+  text-decoration: none;
+  color: #FDF7F0;
+}
+
+.footer-sociale{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  width:7vw;
+  color: #FDF7F0;
+}
+
+.footer-sociale .fa-brands{
+font-size: 2.5vh;
+} 

@@ -141,6 +141,7 @@ nav img {
 }
 #events h1 {
   font-size: 30pt;
+  margin-bottom: 30px;
 }
 
 /* Event card */
@@ -149,27 +150,31 @@ nav img {
   color: white;
   border-radius: 20px;
   width: 280px;
-  height: 400px;
+  height: 370px;
   overflow: hidden;
 }
 .event-card img {
+  object-fit: cover;
+  width: 100%;
   height: 70%;
 }
 .event-card div {
-  margin-left: 20px;
-  margin-top: 10px;
+  margin: auto;
+  width: 90%;
 }
 .event-card div h3 {
+  margin-top: 50px;
   font-size: 30pt;
 }
-.event-card div p {
-  cursor: pointer;
-  width: 90%;
-  height: 40px;
-  margin-top: 20px;
+.event-card div a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  margin-top: 20px;
+  height: 40px;
+  font-size: 15pt;
+  font-weight: 900;
   color: #796b3f;
   border-radius: 20px;
   background-color: #fdf7f0;
@@ -177,5 +182,47 @@ nav img {
 
 /* Splide */
 .splide {
+  height: 400px;
+}
+
+/* Drone video */
+#drone-video {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
   height: 450px;
+  overflow: hidden;
+  margin-bottom: 300px;
+}
+
+video {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+#drone-video div {
+  backdrop-filter: brightness(50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+  color: white;
+  position: absolute;
+  text-align: center;
+}
+
+#drone-video h1 {
+  width: 80%;
+  align-self: center;
+  font-size: 25pt;
+  font-weight: 500;
+}
+
+#drone-video hr {
+  border: 1.5px solid white;
+  border-radius: 10px;
+  width: 50%;
+  align-self: center;
 }

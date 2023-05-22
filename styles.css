@@ -1,5 +1,102 @@
+/* Import fonts */
+@import url("https://use.typekit.net/xya8yvm.css");
+
+/* Remove margin for whole page */
 *,
 *::before,
 *::after {
   margin: 0;
+}
+
+/* Universal styles */
+body {
+  font-family: effra-cc, sans-serif;
+}
+
+/* FRONT PAGE */
+
+/* Header */
+header {
+  background-color: #fdf7f0;
+}
+
+nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+nav img {
+  position: relative;
+  top: 60px;
+  width: 125px;
+}
+
+/* Dropdown */
+.dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: effra-cc, sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+  border: none;
+  cursor: pointer;
+  background-color: #fdf7f0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  font-weight: 500;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-size: 10pt;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+  color: black;
+  background-color: #fdf7f0;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:nth-child(even) {
+  background-color: #f3eee7;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#login {
+  position: relative;
+  top: 3px;
+  text-decoration: none;
+  color: white;
+  background-color: #7a6b3f;
+  padding: 3px 20px;
+  border-radius: 15px;
+}
+
+/* Hero section */
+#hero {
+  background-image: url(images/hero.jpg);
+  background-size: cover;
+  height: 85vh;
+  width: auto;
+}
+
+#overlay-box {
+  border: 2px solid red;
+  height: 85vh;
+  width: 50vw;
 }

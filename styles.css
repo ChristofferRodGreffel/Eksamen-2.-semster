@@ -10,6 +10,7 @@
 
 /* Universal styles */
 body {
+  background-color: #fdf7f0;
   font-family: effra-cc, sans-serif;
 }
 
@@ -17,11 +18,15 @@ body {
 
 /* Header */
 header {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
   background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
 }
 
 nav {
-  height: 60px;
+  max-height: 10vh;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -91,14 +96,88 @@ nav img {
 #hero {
   background-image: url(images/hero.jpg);
   background-size: cover;
-  height: 85vh;
+  height: 84vh;
   width: auto;
 }
 
 #overlay-box {
-  border: 2px solid red;
-  height: 85vh;
-  width: 50vw;
+  position: absolute;
+  right: 0;
+  backdrop-filter: blur(15px);
+  color: white;
+  height: 84vh;
+  width: 35vw;
+}
+#overlay-box h1 {
+  padding-left: 10%;
+  padding-top: 100px;
+  font-size: 35pt;
+}
+#overlay-box p {
+  width: 70%;
+  font-weight: 300;
+  font-size: 15pt;
+  padding-left: 10%;
+  padding-top: 20px;
+}
+.cta {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-top: 40px;
+  margin-left: 10%;
+  padding: 5px 30px;
+  font-size: 15pt;
+  font-weight: 900;
+  width: fit-content;
+  border-radius: 20px;
+  background-color: #7a6b3f;
+}
+
+/* Event section */
+#events {
+  text-align: center;
+  margin-top: 50px;
+}
+#events h1 {
+  font-size: 30pt;
+}
+
+/* Event card */
+.event-card {
+  background-color: #beac76;
+  color: white;
+  border-radius: 20px;
+  width: 280px;
+  height: 400px;
+  overflow: hidden;
+}
+.event-card img {
+  height: 70%;
+}
+.event-card div {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.event-card div h3 {
+  font-size: 30pt;
+}
+.event-card div p {
+  cursor: pointer;
+  width: 90%;
+  height: 40px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #796b3f;
+  border-radius: 20px;
+  background-color: #fdf7f0;
+}
+
+/* Splide */
+.splide {
+  height: 450px;
 }
 
 /* Ignorer dette */

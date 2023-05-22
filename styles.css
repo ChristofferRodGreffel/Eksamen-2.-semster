@@ -31,6 +31,7 @@ nav {
   justify-content: space-around;
   align-items: flex-end;
   padding: 20px;
+  transition: 0.5s ease-in-out;
 }
 
 nav img {
@@ -101,6 +102,9 @@ nav img {
 }
 
 #overlay-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   right: 0;
   backdrop-filter: blur(15px);
@@ -110,7 +114,6 @@ nav img {
 }
 #overlay-box h1 {
   padding-left: 10%;
-  padding-top: 100px;
   font-size: 35pt;
 }
 #overlay-box p {
@@ -138,6 +141,7 @@ nav img {
 #events {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 #events h1 {
   font-size: 30pt;
@@ -156,8 +160,9 @@ nav img {
 .event-card img {
   object-fit: cover;
   width: 100%;
-  height: 70%;
+  max-height: 70%;
 }
+
 .event-card div {
   margin: auto;
   width: 90%;
@@ -181,8 +186,9 @@ nav img {
 }
 
 /* Splide */
-.splide {
-  height: 400px;
+.splide__slide {
+  display: flex;
+  justify-content: center;
 }
 
 /* Drone video */
@@ -192,7 +198,6 @@ nav img {
   width: 100%;
   height: 450px;
   overflow: hidden;
-  margin-bottom: 300px;
 }
 
 video {
@@ -227,43 +232,68 @@ video {
   align-self: center;
 }
 
+/* Teams section */
+#teams {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#teams h2 {
+  font-size: 25pt;
+  margin-bottom: 10px;
+}
+#teams a {
+  margin-left: 0;
+}
+
+#teams img {
+  object-fit: cover;
+  width: 800px;
+  height: 400px;
+  border-radius: 20px;
+}
+
 /* Ignorer dette */
-main{ 
-padding-bottom: 10%;}
+main {
+  padding-bottom: 10%;
+}
 
 /* --FOOTER STYLES------------------------------------- */
-footer{ 
+footer {
   display: flex;
   justify-content: space-around;
   background-color: #7a6b3f;
-  color: #FDF7F0;
+  color: #fdf7f0;
   padding: 3vh 0vh 3vh 0vh;
 }
 
-footer h4{ 
+footer h4 {
   padding-bottom: 1vh;
 }
 
 /* Denne div lagde sig vandret, derfor flex columme */
-#footer-betingelser{
-  display:flex;
+#footer-betingelser {
+  display: flex;
   flex-direction: column;
 }
 
-#footer-betingelser a{
+#footer-betingelser a {
   text-decoration: none;
-  color: #FDF7F0;
+  color: #fdf7f0;
 }
 
-.footer-sociale{ 
+.footer-sociale {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  width:7vw;
-  color: #FDF7F0;
+  width: 7vw;
+  color: #fdf7f0;
 }
 
-.footer-sociale .fa-brands{
-font-size: 2.5vh;
-} 
+.footer-sociale .fa-brands {
+  font-size: 2.5vh;
+}

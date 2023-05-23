@@ -42,6 +42,12 @@ nav img {
   transition: 0.2s ease-in-out;
 }
 
+#mobile-dropsystem {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
 #mobile-header {
   z-index: 1000;
   background-color: #fdf7f0;
@@ -49,19 +55,79 @@ nav img {
   display: none;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
-  height: 50px;
+  height: 100px;
   position: sticky;
   top: 0;
 }
 #mobile-header img {
   position: relative;
-  top: 25px;
+  top: 20px;
+  padding-left: 30px;
   width: 110px;
 }
 #mobile-header i {
+  align-self: flex-end;
   color: #7a6b3f;
+  padding: 30px;
   font-size: 25pt;
+}
+
+/* Burgermenu */
+#burgermenu {
+  width: 100%;
+  position: absolute;
+  transition: 0.8s ease-in-out;
+  transform: translateY(-500px);
+  overflow-y: auto;
+  max-height: calc(100dvh - 100px);
+}
+
+.category {
+  text-align: center;
+}
+
+.cat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.cat-title h1 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+.cat-title i {
+  font-size: 18pt;
+  position: absolute;
+  right: 25px;
+}
+
+/* Category content */
+
+.cat-content {
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.cat-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #f3eee7;
+}
+.cat-content div i {
+  right: 25px;
+}
+.cat-content a {
+  padding: 25px;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
 }
 
 /* Dropdown */
@@ -313,20 +379,16 @@ main {
   padding-bottom: 10%;
 }
 
-
-
-
-
 /* Historiesektionen */
 
-#history{
+#history {
   display: flex;
   justify-content: center;
   margin: auto;
   padding-top: 5vw;
 }
 
-#historytext{
+#historytext {
   height: 300px;
 }
 
@@ -340,7 +402,6 @@ main {
   border-radius: 30px;
   max-width: 100%;
   height: auto;
-
 }
 
 #centersection {
@@ -349,20 +410,18 @@ main {
   width: 25vw;
 }
 
-
-
 /* Faciliteter */
 
-#facilities{
+#facilities {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F3EEE7;
+  background-color: #f3eee7;
   padding: 100px;
   margin-top: 50px;
 }
 
-#vr{
+#vr {
   margin: auto;
   width: 40%;
   border-right: 3px solid black;
@@ -380,10 +439,8 @@ main {
   padding-left: 5vw;
 }
 
-
-
 /* Undervisning og aktiviteter */
-#activities{
+#activities {
   display: flex;
   justify-content: center;
   width: 80%;
@@ -399,7 +456,6 @@ main {
 #rightbox {
   width: 70%;
 }
-
 
 /* --FOOTER STYLES------------------------------------- */
 footer {

@@ -41,3 +41,45 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
   }
 };
+
+// Burgermenu mobile
+
+const burger = document.querySelector(".fa-bars");
+const menu = document.querySelector("#burgermenu");
+const category = document.querySelectorAll(".category");
+
+category.forEach((cat) => {
+  const catContent = cat.querySelector(".cat-content");
+  catContent.addEventListener("click", (el) => {
+    el.stopPropagation();
+  });
+  const catIcon = cat.querySelector("i");
+  cat.addEventListener("click", (el) => {
+    let catHeight = catContent.scrollHeight;
+    let currentHeight = catContent.clientHeight;
+    if (currentHeight == 0) {
+      catContent.style.maxHeight = `${catHeight}px`;
+    } else {
+      catContent.style.maxHeight = `0px`;
+    }
+    let currentIcon = catIcon.getAttribute("class");
+    if (currentIcon == "fa-solid fa-plus") {
+      catIcon.setAttribute("class", "fa-solid fa-minus");
+    } else {
+      catIcon.setAttribute("class", "fa-solid fa-plus");
+    }
+  });
+});
+
+let isOpen = false;
+
+burger.addEventListener("click", () => {
+  if (!isOpen) {
+    menu.style.transform = "translateY(0px)";
+    isOpen = true;
+  } else {
+    let menuHeight = menu.clientHeight;
+    menu.style.transform = `translateY(-${menuHeight}px)`;
+    isOpen = false;
+  }
+});

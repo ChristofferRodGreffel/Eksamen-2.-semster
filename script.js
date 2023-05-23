@@ -1,7 +1,22 @@
 // Splide
+let slideAmount;
+
+function checkWidth() {
+  if (window.innerWidth > 1500) {
+    slideAmount = 4;
+  } else if (window.innerWidth > 1080) {
+    slideAmount = 3;
+  } else if (window.innerWidth > 850) {
+    slideAmount = 2;
+  } else {
+    slideAmount = 1;
+  }
+  return slideAmount;
+}
+
 let splide = new Splide(".splide", {
   type: "loop",
-  perPage: 3,
+  perPage: checkWidth(),
 });
 
 splide.mount();

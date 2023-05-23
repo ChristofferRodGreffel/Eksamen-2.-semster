@@ -280,8 +280,6 @@ main {
 
 
 
-
-
 /* Historiesektionen */
 
 #history{
@@ -345,6 +343,19 @@ main {
   padding-left: 5vw;
 }
 
+.listdirection {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.listdirection img {
+  padding-right: 10px;
+}
+
+#splitsections{
+  position: relative;
+  top: -5vw;
+}
 
 
 /* Undervisning og aktiviteter */
@@ -353,7 +364,6 @@ main {
   justify-content: center;
   width: 80%;
   margin: auto;
-  padding-top: 5vw;
   padding-bottom: 5vw;
 }
 

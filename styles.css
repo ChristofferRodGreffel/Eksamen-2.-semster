@@ -331,3 +331,189 @@ footer h4 {
 .footer-sociale .fa-brands {
   font-size: 20px;
 }
+
+/* Her starter Hestene/Bestyrelsen */
+
+/* Overskrift */
+.hestene-bestyrelse-h1{
+  text-align: center;
+  margin-top: 5vw;
+}
+
+.hestene-bestyrelse-p{
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+/* Classen split-colored-div-1 er baggrunden for denne sektion.
+Vi skifter mellem brugen af classen split-colored-div-1 og split-colored-div-2, for
+nemt at kunne tilfølje flere heste*/
+.split-colored-div-1 {
+  background: linear-gradient(to right, #7A6B3F 0%,#7A6B3F 30%,#F3EEE7 30%, #F3EEE7 100%);
+  height: 30vw;
+}
+/* Classen split-colored-div-1-text bestemmer hvordan teksten skal
+forholde sig ift. resten af indholdet i div'en*/
+.split-colored-div-1-text{
+  margin-left: 45vw;
+  margin-top: -23vw;
+  z-index: 1;
+  max-width: 40vw;
+  color: black;
+}
+
+/* Titlen under bestyrelsesmedlemmernes navne */
+.bestyrelse-p-title {
+font-style: italic;
+font-size: 15pt;
+}
+
+/* Her bestemmes det hvordan billedet skal placeres */
+.split-colored-div-1 img {
+height: 22vw;
+width: 22vw;
+margin-left: 19%;
+margin-top: 4%;
+margin-bottom: 2%;
+z-index: +1;
+border-radius: 10%;
+}
+
+/* Her beskriver vi hvordan split-colored-div-2 bruges. Kommandoerne er de samme,
+men værdierne er anderledes og tilpasset efter mockuppen */
+.split-colored-div-2 {
+  background: linear-gradient(to left, #7A6B3F 0%,#7A6B3F 30%, #FDF7F0 30%, #FDF7F0 100%);
+  height: 30vw;
+}
+
+.split-colored-div-2-text{
+  margin-left: 15vw;
+  margin-top: -23vw;
+  z-index: 1;
+  max-width: 40vw;
+  color: rgb(0, 0, 0);
+}
+
+.split-colored-div-2 img{
+  height: 22vw;
+  width: 22vw;
+  margin-left: 59%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  z-index: +1;
+  border-radius: 10%;
+}
+
+/* Media quiaries 1080px - IPad size*/
+@media screen and (max-width: 1080px) {
+
+  /* Overskrift på siden */
+  .hestene-bestyrelse-h1{
+    font-size: 12pt;
+  }
+
+  .hestene-bestyrelse-p{
+    font-size: 10pt;
+  }
+
+/* Tekster på siden */
+  .split-colored-div-1-text p{
+    font-size: 12pt;
+  }
+
+  .split-colored-div-2-text p{
+    font-size: 12pt;
+  }
+
+  .split-colored-div-1-text h1{
+    font-size: 12pt;
+  }
+
+  .split-colored-div-2-text h1{
+    font-size: 12pt;
+  }
+
+  /* Bestyrelsens titler */
+  .bestyrelse-p-title{
+    font-size: 10pt;
+ }
+}
+
+/* Media queries 570px */
+@media screen and (max-width: 570px){
+  
+    /* Overskrift på siden */
+    .hestene-bestyrelse-h1{
+      font-size: 14pt;
+    }
+  
+    .hestene-bestyrelse-p{
+      font-size: 12pt;
+      margin-left: 15vw;
+      margin-right: 15vw;
+    }
+
+   /* Baggrundsfarve ændres */
+ .split-colored-div-1 {
+  background: linear-gradient(to right, #7A6B3F 0%,#7A6B3F 25%,#F3EEE7 25%, #F3EEE7 100%);
+  height: 60vw;
+}
+
+ /* Baggrundsfarve ændres */
+ .split-colored-div-2 {
+  height: 60vw;
+}
+
+/* Billede ændres */
+.split-colored-div-1 img {
+  height: 35vw;
+  width: 35vw;
+  margin-left: 8%;
+  margin-top: 12%;
+  }
+
+  .split-colored-div-2 img {
+    height: 35vw;
+    width: 35vw;
+    margin-left: 53%;
+    margin-top: 12%;
+    }
+
+/* Tekster på siden */
+  .split-colored-div-1-text p{
+    font-size: 8pt;
+    margin-top: 5vw;
+    margin-left: 2vw;
+    margin-right: -10vw;
+  }
+
+  .split-colored-div-2-text p{
+    font-size: 8pt;
+    margin-top: 5vw;
+    margin-right: 2vw;
+    margin-left: -10vw;
+  }
+
+  .split-colored-div-1-text h1{
+    font-size: 12pt;
+    margin-top: -40vw;
+    margin-bottom: -5vw;
+    margin-left: 2vw;
+    margin-right: -10vw;
+  }
+
+  .split-colored-div-2-text h1{
+    font-size: 12pt;
+    margin-top: -40vw;
+    margin-bottom: -5vw;
+    margin-right: 2vw;
+    margin-left: -10vw;
+  }
+
+  /* Bestyrelsens titler */
+  .bestyrelse-p-title{
+    font-size: 6pt;
+    margin-bottom: -4vw;
+ }
+
+}

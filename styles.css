@@ -470,6 +470,85 @@ main {
   width: 70%;
 }
 
+/* --HOLD STYLES------------------------------------- */
+#main-hold{ 
+  margin: 0vh 5vw 0vh 5vw;
+}
+#filtre-btn{
+  color:white;
+  background-color: #BEAC76;
+  border-radius: 20px;
+  width: 10vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10vh;
+  padding: 0.5%;
+}
+
+.hold-card-row{ 
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5vh;
+}
+
+.hold-card{ 
+  background-color:white;
+  width: 20vw;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.hold-card img{ 
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+
+.hold-card .content{
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+}
+.hold-card .content hr{
+  border: #796b3f solid 1px;
+} 
+.hold-card .content-left{
+  padding:0vw 2vw 0vw 2vw;
+}
+.hold-card .content-right{
+  padding:0vw 2vw 0vw 2vw;
+}
+.content-right p{
+  padding:0.5vh 0vh 0.5vh 0vh;
+}
+.hold-card .content-left-info{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7vw;
+  padding:0.5vh 0vh 0.5vh 0vh;
+}
+
+.hold-card .content-left-info i{ 
+  color: #554c2f;
+}
+
+.hold-card .tilmeld-cta{ 
+  background-color:#BEAC76;
+  border-radius: 0px 0px 20px 20px;
+  padding:5%;
+}
+.hold-card .tilmeld-cta a{ 
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
 /* --FOOTER STYLES------------------------------------- */
 footer {
   display: flex;
@@ -755,3 +834,5 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     margin-bottom: -4vw;
   }
 }
+
+

@@ -184,6 +184,94 @@ nav img {
 main{ 
 padding-bottom: 10%;}
 
+
+
+
+
+/* Historiesektionen */
+
+#history{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 5vw;
+}
+
+#historytext{
+  height: 300px;
+}
+
+#image {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+}
+
+#imagecenter {
+  border-radius: 30px;
+  max-width: 100%;
+  height: auto;
+
+}
+
+#centersection {
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 25vw;
+}
+
+
+
+/* Faciliteter */
+
+#facilities{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3EEE7;
+  padding: 100px;
+  margin-top: 50px;
+}
+
+#vr{
+  margin: auto;
+  width: 40%;
+  border-right: 3px solid black;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  height: 10vw;
+}
+
+#vr h1 {
+  padding-top: 3vw;
+}
+
+#listfacilities {
+  padding-left: 5vw;
+}
+
+
+
+/* Undervisning og aktiviteter */
+#activities{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+#leftbox {
+  width: 70%;
+  padding-right: 50px;
+}
+#rightbox {
+  width: 70%;
+}
+
+
 /* --FOOTER STYLES------------------------------------- */
 footer{ 
   display: flex;

@@ -23,6 +23,7 @@ header {
   top: 0;
   background-color: #fdf7f0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+  transition: 0.2s ease-in-out;
 }
 
 nav {
@@ -38,6 +39,7 @@ nav img {
   position: relative;
   top: 60px;
   width: 125px;
+  transition: 0.2s ease-in-out;
 }
 
 /* Dropdown */
@@ -75,6 +77,11 @@ nav img {
   text-decoration: none;
   display: block;
 }
+.dropdown-content a:hover,
+.dropdown-content a:nth-child(even):hover {
+  background-color: #7a6b3f;
+  color: white;
+}
 .dropdown-content a:nth-child(even) {
   background-color: #f3eee7;
 }
@@ -91,6 +98,10 @@ nav img {
   background-color: #7a6b3f;
   padding: 3px 20px;
   border-radius: 15px;
+  transition: 0.1s ease-in-out;
+}
+#login:hover {
+  background-color: #554c2f;
 }
 
 /* Hero section */
@@ -135,6 +146,10 @@ nav img {
   width: fit-content;
   border-radius: 20px;
   background-color: #7a6b3f;
+  transition: 0.2s ease-in-out;
+}
+.cta:hover {
+  background-color: #554c2f;
 }
 
 /* Event section */
@@ -280,6 +295,7 @@ footer div {
 footer div a {
   text-decoration: none;
   color: white;
+  transition: 0.1s ease-in-out;
 }
 
 footer h4 {

@@ -93,10 +93,25 @@ const filterKnap = document.querySelector("filter-knap");
 const filterMenu = document.querySelector("filter-menu");
 const filterCategory = document.querySelectorAll(".filter-category");
 
-category.forEach((filterCat) => {
+filterCategory.forEach((filterCat) => {
   const filterCatContent = filterCat.querySelector(".filter-cat-content");
   filterCatContent.addEventListener("click", (el) => {
     el.stopPropagation();
+  });
+  filterCat.addEventListener("click", (el) => {
+    let catHeight = filterCatContent.scrollHeight;
+    let currentHeight = filterCatContent.clientHeight;
+    if (currentHeight == 0) {
+      filterCatContent.style.maxHeight = `${catHeight}px`;
+    } else {
+      filterCatContent.style.maxHeight = `0px`;
+    }
+    let currentIcon = catIcon.getAttribute("class");
+    if (currentIcon == "fa-solid fa-plus") {
+      catIcon.setAttribute("class", "fa-solid fa-minus");
+    } else {
+      catIcon.setAttribute("class", "fa-solid fa-plus");
+    }
   });
 });
 

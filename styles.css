@@ -493,21 +493,24 @@ main {
 
 /* --HOLD STYLES------------------------------------- */
 #main-hold {
-  margin: 0vh 5vw 0vh 5vw;
+  width: 85%;
+  margin: auto;
 }
 
 /* --filter knap------------------------------------- */
 
-#filter-knap{
-  color:white;
-  background-color: #BEAC76;
-  border-radius: 20px;
-  width: 8vw;
+#filter-knap {
+  cursor: pointer;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 10vh;
-  padding: 1%;
+  width: 60px;
+  color: white;
+  background-color: #beac76;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 5vh;
+  padding: 8px 30px;
 }
 
 .filter-category {
@@ -525,11 +528,6 @@ main {
 .filter-cat-title h1 {
   font-size: 18pt;
   font-weight: 600;
-}
-.filter-cat-title i {
-  font-size: 18pt;
-  position: absolute;
-  right: 25px;
 }
 
 /* Category content */
@@ -558,68 +556,93 @@ main {
   box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
 }
 
-
-
 /* --Cards------------------------------------- */
 
-.hold-card-row{ 
+.card-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 5vh;
+  justify-content: left;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.hold-card{ 
-  background-color:white;
-  width: 17vw;
-  text-align: center;
+.hold-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;
+  background-color: white;
+  width: 300px;
+  text-align: left;
   border-radius: 20px;
 }
 
 .hold-card img {
   width: 100%;
+  object-fit: contain;
   border-radius: 20px 20px 0px 0px;
 }
 
-.hold-card .content {
+.hold-card h3 {
+  padding-left: 20px;
+}
+
+.content {
   display: flex;
   justify-content: space-around;
   font-size: 1.5vh;
+  padding-left: 20px;
 }
 
-.hold-card .content hr{
-  border: #796b3f solid 1px;
-  height: 16vh;
-} 
-.hold-card .content-left{
-  padding:0vw 0.5vw 0vw 0.5vw;
+.content hr {
+  border: #796b3f solid 1.5px;
+  border-radius: 10px;
+  height: 100px;
+  align-self: center;
 }
-.hold-card .content-right{
-  padding:0vw 0.5vw 0vw 0.5vw;
-}
-.hold-card .content-right {
-  padding: 0vw 2vw 0vw 2vw;
+
+.content-right {
+  font-size: 10pt;
+  width: 50%;
 }
 .content-right p {
-  padding: 0.5vh 0vh 0.5vh 0vh;
+  width: 80%;
+  margin: auto;
+  line-height: 15px;
 }
-.hold-card .content-left-info {
+
+.content-left-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
-  width: 7vw;
-  padding: 0.5vh 0vh 0.5vh 0vh;
+  gap: 10px;
+  height: 30px;
+}
+.content-left-info p {
+  font-size: 10pt;
 }
 
-.hold-card .content-left-info i {
+.content-left-info i {
   color: #554c2f;
+  font-size: 15pt;
+}
+.content-left-info .fa-user-group {
+  font-size: 13pt;
 }
 
-.hold-card .tilmeld-cta {
+.tilmeld-cta {
+  text-align: center;
+  font-size: 15pt;
   background-color: #beac76;
   border-radius: 0px 0px 20px 20px;
-  padding: 5%;
+  padding: 10px;
+  transition: 0.05s ease-in-out;
 }
-.hold-card .tilmeld-cta a {
+.tilmeld-cta:hover {
+  background-color: #796b3f;
+}
+
+.tilmeld-cta {
+  font-weight: 600;
   text-decoration: none;
   color: white;
 }
@@ -790,11 +813,9 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     width: 100%;
   }
 
-/* Hold cards */
-.hold-card-row{ 
-}
-
-
+  /* Hold cards */
+  .hold-card-row {
+  }
 
   /* FOOTER */
   footer {

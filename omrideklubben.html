@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/e4a889809e.js" crossorigin="anonymous"></script>
-    <script src="splide.min.js"></script>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="splide.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Om rideklubben</title>
   </head>
-
 
   <body>
     <header>
@@ -45,7 +42,7 @@
             <a href="#">Kørselsvejledning</a>
           </div>
         </div>
-        <img src="images/logo.svg" alt="logo" />
+        <a href="index.html"><img src="images/logo.svg" alt="logo" /></a>
         <div class="dropdown">
           <button class="dropbtn">Om rideklubben <i class="fa-solid fa-chevron-down"></i></button>
           <div class="dropdown-content">
@@ -64,127 +61,207 @@
         <a href="#" id="login">Log ind</a>
       </nav>
     </header>
+    <div id="mobile-dropsystem">
+      <div id="mobile-header">
+        <a href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div id="burgermenu">
+        <div class="category">
+          <div class="cat-title">
+            <h1>Ridning</h1>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="cat-content">
+            <div>
+              <a href="#">Ridehold</a>
+              <a href="#">Privatundervisning</a>
+              <a href="#">Ridefysioterapi</a>
+              <a href="#">Hestene</a>
+              <a href="#">Sådan tilmelder du dig</a>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <div class="cat-title">
+            <h1>Begivenheder</h1>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="cat-content">
+            <div>
+              <a href="#">Ridelejr</a>
+              <a href="#">Konkurrencer</a>
+              <a href="#">Springkursus</a>
+              <a href="#">Kalender</a>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <div class="cat-title">
+            <h1>Praktisk info</h1>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="cat-content">
+            <div>
+              <a href="#">Priser</a>
+              <a href="#">Kontakt</a>
+              <a href="#">Regler & sikkerhed</a>
+              <a href="#">Klublove & vedtægter</a>
+              <a href="#">Kørselsvejledning</a>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <div class="cat-title">
+            <h1>Om rideklubben</h1>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="cat-content">
+            <div>
+              <a href="#">Historie</a>
+              <a href="#">Faciliteter</a>
+              <a href="#">Opstaldning</a>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <div class="cat-title">
+            <h1>For medlemmer</h1>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="cat-content">
+            <div>
+              <a href="#">Kontingent</a>
+              <a href="#">Kalender</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--Historie sektionen-->
-    <section id="history">
+    <!-- <section id="history">
       <div>
-        <img id="image" src="images/bomme.jpg" alt="bomme"/>
+        <img class="image" src="images/bomme.jpg" alt="bomme" />
       </div>
       <div id="centersection">
-          <div id="historytext">
-            <h1>Sportsrideklubben Silkeborgs historie</h1>
-            <p>Sportsrideklubben Silkeborg blev stiftet i 1991, hvor man havde fokus på ridebanespringning. Dette har stadig et stort fokus, men med årene er der blevet mere fokus på bredden så alle kan være med.</p>
-            <p>Stedet er ejet af Frank og Maria Kejlberg - hvor Frank fungere som daglig leder.</p>
-            <p>Udover almindelig rideskoleundervisning, tilbyder rideskolen  også ridefysioterapi.</p>
-            <a href="Læs mere her."></a>
+        <div id="historytext">
+          <h1>Sportsrideklubben Silkeborgs historie</h1>
+          <p>
+            Sportsrideklubben Silkeborg blev stiftet i 1991, hvor man havde fokus på ridebanespringning. Dette har
+            stadig et stort fokus, men med årene er der blevet mere fokus på bredden så alle kan være med.
+          </p>
+          <p>Stedet er ejet af Frank og Maria Kejlberg - hvor Frank fungere som daglig leder.</p>
+          <p>Udover almindelig rideskoleundervisning, tilbyder rideskolen også ridefysioterapi.</p>
+          <a href="Læs mere her."></a>
         </div>
-        <img id="imagecenter" src="images/ridebanehus.jpg" alt="ridebanehus"/>
-      </div> 
-      <div>
-        <img id="image" src="images/stald.jpg" alt="bomme" />
+        <img id="imagecenter" src="images/ridebanehus.jpg" alt="ridebanehus" />
       </div>
-    </section>
+      <div>
+        <img class="image" src="images/stald.jpg" alt="bomme" />
+      </div>
+    </section> -->
 
+    <section id="history">
+      <div>
+        <h1>Sportsrideklubben Silkeborgs Historie</h1>
+        <p>
+          Sportsrideklubben Silkeborg blev stiftet i 1991, hvor man havde fokus på ridebanespringning. Dette har stadig
+          et stort fokus, men med årene er der blevet mere fokus på bredden så alle kan være med. <br /><br />
+          Stedet er ejet af Frank og Maria Kejlberg - hvor Frank fungere som daglig leder. <br /><br />
+          Udover almindelig rideskoleundervisning, tilbyder rideskolen også ridefysioterapi.
+          <a href="#">Læs mere her</a>
+        </p>
+      </div>
+      <img src="images/ridebanehus.jpg" alt="ridebanehus" />
+    </section>
 
     <!--Faciliteter-->
     <section id="facilities">
-      <div id="vr">
-        <h1>Faciliteter</h1>
-      </div>
+      <h1>Vores faciliteter</h1>
+      <hr />
       <div id="listfacilities">
         <div class="listdirection">
-          <img src="images/Hestesko.svg" alt="hestesko" height="20px">
+          <img src="images/Hestesko.svg" alt="hestesko" height="20px" />
           <p>Vi har to 20x40 ridehuse med fiberbund.</p>
         </div>
         <div class="listdirection">
-          <img src="images/Hestesko.svg" alt="hestesko" height="20px">
+          <img src="images/Hestesko.svg" alt="hestesko" height="20px" />
           <p>Lækker kæmpe udendørs opvarmnings-/dressurbane ligeledes med fiberbund</p>
         </div>
         <div class="listdirection">
-          <img src="images/Hestesko.svg" alt="hestesko" height="20px">
+          <img src="images/Hestesko.svg" alt="hestesko" height="20px" />
           <p>Stor græs-springbane med 'cafeteria', dommertårn og sekretariat</p>
         </div>
         <div class="listdirection">
-          <img src="images/Hestesko.svg" alt="hestesko" height="20px">
+          <img src="images/Hestesko.svg" alt="hestesko" height="20px" />
           <p>20x60 sandridebane</p>
         </div>
       </div>
     </section>
 
     <div id="splitsections">
-      <img src="images/bommedsaddel.svg" alt="bommedsaddel">
+      <img src="images/bommedsaddel.svg" alt="bommedsaddel" />
     </div>
 
     <!--Undervisning og aktiviteter-->
     <section id="activities">
       <div id="leftbox">
         <h2>Undervisning</h2>
-        <p>Sportsrideklubben Silkeborg  tilbyder undervisning på alle niveauer i både ridebanespringning og dressur. 
-          Det kan forgå på elevpony/-hest eller egen pony/hest. Ligeledes er udefra kommende privatryttere velkomne. 
-          Vi har f.eks. begynderhold for de yngste, motionshold, ½-times luksushold med kun 2 ryttere, enetimer, gymnastik. 
-          og bane-springningshold.</p>
+        <p>
+          Sportsrideklubben Silkeborg tilbyder undervisning på alle niveauer i både ridebanespringning og dressur. Det
+          kan forgå på elevpony/-hest eller egen pony/hest. Ligeledes er udefra kommende privatryttere velkomne. Vi har
+          f.eks. begynderhold for de yngste, motionshold, ½-times luksushold med kun 2 ryttere, enetimer, gymnastik. og
+          bane-springningshold.
+        </p>
       </div>
       <div id="rightbox">
         <h2>Aktiviteter</h2>
-        <p>Sportsrideklubben Silkeborg har udover ridning også en masse sociale arrangementer. De har stævner, julefrokost, 
-          banko og meget mere. Hvor mange arrangementer der er på et år, afhænger selvfølgelig af hvor mange frivillige de har, 
-          da rideklubben primært er drevet af frivillige.</p>
+        <p>
+          Sportsrideklubben Silkeborg har udover ridning også en masse sociale arrangementer. De har stævner,
+          julefrokost, banko og meget mere. Hvor mange arrangementer der er på et år, afhænger selvfølgelig af hvor
+          mange frivillige de har, da rideklubben primært er drevet af frivillige.
+        </p>
       </div>
     </section>
 
-
-
     <footer>
       <div>
-          <h4>Kontakt</h4>
-          <p>Tlf: + 45 20 16 17 26</p>
-          <p>E-mail: info@sportsrideklubbensilkeborg.dk</p>
-          <p>CVR: 15781998</p>
+        <h4>Kontakt</h4>
+        <p>Tlf: + 45 20 16 17 26</p>
+        <p>E-mail: info@sportsrideklubbensilkeborg.dk</p>
+        <p>CVR: 15781998</p>
       </div>
-  
+
       <div id="footer-betingelser">
-           <h4>Links</h4>
-           <a href="">Brugerbetingelser</a>
-           <a href="">Privatlivspolitik</a>
-           <a href="">Salgsbetingelser</a>
-           <a href="">Udlejningsbetingelser</a>
-           <a href="">Staldkontrakt</a>
+        <h4>Links</h4>
+        <a href="">Brugerbetingelser</a>
+        <a href="">Privatlivspolitik</a>
+        <a href="">Salgsbetingelser</a>
+        <a href="">Udlejningsbetingelser</a>
+        <a href="">Staldkontrakt</a>
       </div>
-  
+
       <div>
-          <h4>Adresse</h4>
-          <p>Sortenborg 39 <br>
-          8600 Silkeborg</p>
+        <h4>Adresse</h4>
+        <p>
+          Sortenborg 39 <br />
+          8600 Silkeborg
+        </p>
       </div>
-  
+
       <div>
-  
-          <h4>Sociale</h4>
-          <a class="footer-sociale" href="">
-              <i class="fa-brands fa-instagram"></i>
-              <p>Instagram</p>
-          </a>
-  
-          <a class="footer-sociale" href="">
-              <i class="fa-brands fa-square-facebook"></i>
-              <p>Facebook</p>
-          </a>
-  
+        <h4>Sociale</h4>
+        <a class="footer-sociale" href="">
+          <i class="fa-brands fa-instagram"></i>
+          <p>Instagram</p>
+        </a>
+
+        <a class="footer-sociale" href="">
+          <i class="fa-brands fa-square-facebook"></i>
+          <p>Facebook</p>
+        </a>
       </div>
-  </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </footer>
   </body>
 </html>

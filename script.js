@@ -1,25 +1,28 @@
 // Splide
-let slideAmount;
 
-function checkWidth() {
-  if (window.innerWidth > 1500) {
-    slideAmount = 4;
-  } else if (window.innerWidth > 1080) {
-    slideAmount = 3;
-  } else if (window.innerWidth > 850) {
-    slideAmount = 2;
-  } else {
-    slideAmount = 1;
+if (document.title === "Sportsrideklubben Silkeborg") {
+  let slideAmount;
+
+  function checkWidth() {
+    if (window.innerWidth > 1500) {
+      slideAmount = 4;
+    } else if (window.innerWidth > 1080) {
+      slideAmount = 3;
+    } else if (window.innerWidth > 850) {
+      slideAmount = 2;
+    } else {
+      slideAmount = 1;
+    }
+    return slideAmount;
   }
-  return slideAmount;
+
+  let splide = new Splide(".splide", {
+    type: "loop",
+    perPage: checkWidth(),
+  });
+
+  splide.mount();
 }
-
-let splide = new Splide(".splide", {
-  type: "loop",
-  perPage: checkWidth(),
-});
-
-splide.mount();
 
 // Header collapse
 const logo = document.querySelector("nav img");

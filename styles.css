@@ -43,6 +43,7 @@ nav img {
 }
 
 #mobile-dropsystem {
+  display: none;
   z-index: 1000;
   position: sticky;
   top: 0;
@@ -74,10 +75,10 @@ nav img {
 
 /* Burgermenu */
 #burgermenu {
+  transform: translateY(-600px);
   width: 100%;
   position: absolute;
   transition: 0.8s ease-in-out;
-  transform: translateY(-500px);
   overflow-y: auto;
   max-height: calc(100dvh - 100px);
 }
@@ -87,12 +88,18 @@ nav img {
 }
 
 .cat-title {
+  text-decoration: none;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px;
   background-color: #fdf7f0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.cat-title:last-of-type {
+  color: white;
+  background-color: #796b3f;
 }
 .cat-title h1 {
   font-size: 18pt;
@@ -324,7 +331,7 @@ video {
   object-fit: cover;
 }
 #drone-video div {
-  backdrop-filter: brightness(50%);
+  /* backdrop-filter: brightness(50%); */
   height: 100%;
   width: 100%;
   display: flex;
@@ -383,6 +390,25 @@ main {
 
 #history {
   display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+#history div {
+  width: 40%;
+}
+#history div h1 {
+  margin-bottom: 20px;
+  font-size: 30pt;
+  line-height: 40px;
+}
+#history img {
+  border-radius: 20px;
+}
+
+/* #history {
+  display: flex;
   justify-content: center;
   margin: auto;
   padding-top: 5vw;
@@ -392,9 +418,9 @@ main {
   height: 300px;
 }
 
-#image {
+.image {
   border-radius: 30px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -408,35 +434,30 @@ main {
   padding-left: 50px;
   padding-right: 50px;
   width: 25vw;
-}
+} */
 
 /* Faciliteter */
 
 #facilities {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #f3eee7;
-  padding: 100px;
   margin-top: 50px;
+  padding: 100px 0px 100px 0px;
 }
 
-#vr {
-  margin: auto;
-  width: 40%;
-  border-right: 3px solid black;
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-  height: 10vw;
-}
-
-#vr h1 {
-  padding-top: 3vw;
+#facilities hr {
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 #listfacilities {
-  padding-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
 }
 
 .listdirection {
@@ -445,12 +466,18 @@ main {
 }
 
 .listdirection img {
+  position: relative;
+  top: 5px;
   padding-right: 10px;
 }
 
 #splitsections {
+  overflow: hidden;
   position: relative;
   top: -5vw;
+}
+#splitsections img {
+  width: 102%;
 }
 
 /* Undervisning og aktiviteter */
@@ -471,83 +498,160 @@ main {
 }
 
 /* --HOLD STYLES------------------------------------- */
-#main-hold{ 
-  margin: 0vh 5vw 0vh 5vw;
-}
-#filtre-btn{
-  color:white;
-  background-color: #BEAC76;
-  border-radius: 20px;
-  width: 10vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 10vh;
-  padding: 0.5%;
+#main-hold {
+  width: 85%;
+  margin: auto;
 }
 
-.hold-card-row{ 
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5vh;
-}
+/* --filter knap------------------------------------- */
 
-.hold-card{ 
-  background-color:white;
-  width: 20vw;
-  text-align: center;
-  border-radius: 20px;
-}
-
-.hold-card img{ 
-  width: 100%;
-  border-radius: 20px 20px 0px 0px;
-}
-
-
-.hold-card .content{
-  display: flex;
-  justify-content: space-around;
-  margin: 5%;
-}
-.hold-card .content hr{
-  border: #796b3f solid 1px;
-} 
-.hold-card .content-left{
-  padding:0vw 2vw 0vw 2vw;
-}
-.hold-card .content-right{
-  padding:0vw 2vw 0vw 2vw;
-}
-.content-right p{
-  padding:0.5vh 0vh 0.5vh 0vh;
-}
-.hold-card .content-left-info{ 
+#filter-knap {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 7vw;
-  padding:0.5vh 0vh 0.5vh 0vh;
+  width: 60px;
+  color: white;
+  background-color: #beac76;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 5vh;
+  padding: 8px 30px;
 }
 
-.hold-card .content-left-info i{ 
+.filter-category {
+  text-align: center;
+}
+
+.filter-cat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.filter-cat-title h1 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+/* Category content */
+
+.filter-cat-content {
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.filter-cat-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #f3eee7;
+}
+.filter-cat-content div i {
+  right: 25px;
+}
+.filter-cat-content a {
+  padding: 25px;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
+}
+
+/* --Cards------------------------------------- */
+
+.card-container {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hold-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;
+  background-color: white;
+  width: 300px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.hold-card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hold-card h3 {
+  padding-left: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5vh;
+  padding-left: 20px;
+}
+
+.content hr {
+  border: #796b3f solid 1.5px;
+  border-radius: 10px;
+  height: 100px;
+  align-self: center;
+}
+
+.content-right {
+  font-size: 10pt;
+  width: 50%;
+}
+.content-right p {
+  width: 80%;
+  margin: auto;
+  line-height: 15px;
+}
+
+.content-left-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+}
+.content-left-info p {
+  font-size: 10pt;
+}
+
+.content-left-info i {
   color: #554c2f;
+  font-size: 15pt;
+}
+.content-left-info .fa-user-group {
+  font-size: 13pt;
 }
 
-.hold-card .tilmeld-cta{ 
-  background-color:#BEAC76;
+.tilmeld-cta {
+  text-align: center;
+  font-size: 15pt;
+  background-color: #beac76;
   border-radius: 0px 0px 20px 20px;
-  padding:5%;
+  padding: 10px;
+  transition: 0.05s ease-in-out;
 }
-.hold-card .tilmeld-cta a{ 
+.tilmeld-cta:hover {
+  background-color: #796b3f;
+}
+
+.tilmeld-cta {
+  font-weight: 600;
   text-decoration: none;
   color: white;
 }
-
-
-
-
-
 
 /* --FOOTER STYLES------------------------------------- */
 footer {
@@ -806,6 +910,9 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   #mobile-header {
     display: flex;
   }
+  #mobile-dropsystem {
+    display: block;
+  }
 
   /* FORSIDE */
   #hero {
@@ -830,6 +937,10 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   }
   #teams img {
     width: 100%;
+  }
+
+  /* Hold cards */
+  .hold-card-row {
   }
 
   /* FOOTER */
@@ -874,6 +985,47 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   /* Bestyrelsens titler */
   .bestyrelse-p-title {
     font-size: 10pt;
+  }
+
+  /* OM RIDEKLUBBEN */
+
+  #history {
+    flex-direction: column;
+    width: 85%;
+  }
+  #history div {
+    width: 100%;
+  }
+  #history img {
+    margin-top: 30px;
+  }
+
+  #facilities {
+    flex-direction: column;
+  }
+  #facilities h1 {
+    font-size: 25pt;
+    margin-bottom: 30px;
+  }
+  #facilities hr {
+    display: none;
+  }
+  #listfacilities {
+    width: 80%;
+  }
+
+  #activities {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  #leftbox,
+  #rightbox {
+    width: 85%;
+    padding: 0;
   }
 }
 
@@ -1019,5 +1171,3 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     margin-bottom: -4vw;
   }
 }
-
-

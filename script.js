@@ -1,25 +1,28 @@
 // Splide
-let slideAmount;
 
-function checkWidth() {
-  if (window.innerWidth > 1500) {
-    slideAmount = 4;
-  } else if (window.innerWidth > 1080) {
-    slideAmount = 3;
-  } else if (window.innerWidth > 850) {
-    slideAmount = 2;
-  } else {
-    slideAmount = 1;
+if (document.title === "Sportsrideklubben Silkeborg") {
+  let slideAmount;
+
+  function checkWidth() {
+    if (window.innerWidth > 1500) {
+      slideAmount = 4;
+    } else if (window.innerWidth > 1080) {
+      slideAmount = 3;
+    } else if (window.innerWidth > 850) {
+      slideAmount = 2;
+    } else {
+      slideAmount = 1;
+    }
+    return slideAmount;
   }
-  return slideAmount;
+
+  let splide = new Splide(".splide", {
+    type: "loop",
+    perPage: checkWidth(),
+  });
+
+  splide.mount();
 }
-
-let splide = new Splide(".splide", {
-  type: "loop",
-  perPage: checkWidth(),
-});
-
-splide.mount();
 
 // Header collapse
 const logo = document.querySelector("nav img");
@@ -81,5 +84,52 @@ burger.addEventListener("click", () => {
     let menuHeight = menu.clientHeight;
     menu.style.transform = `translateY(-${menuHeight}px)`;
     isOpen = false;
+    category.forEach((cat) => {
+      const catContent = cat.querySelector(".cat-content");
+      const catIcon = cat.querySelector(".cat-title i");
+      catIcon.setAttribute("class", "fa-solid fa-plus");
+      catContent.style.maxHeight = `0px`;
+    });
   }
 });
+
+// HOLD SIDE FILTRE KNAP
+
+// const filterKnap = document.querySelector("filter-knap");
+// const filterMenu = document.querySelector("filter-menu");
+// const filterCategory = document.querySelectorAll(".filter-category");
+
+// filterCategory.forEach((filterCat) => {
+//   const filterCatContent = filterCat.querySelector(".filter-cat-content");
+//   filterCatContent.addEventListener("click", (el) => {
+//     el.stopPropagation();
+//   });
+//   filterCat.addEventListener("click", (el) => {
+//     let catHeight = filterCatContent.scrollHeight;
+//     let currentHeight = filterCatContent.clientHeight;
+//     if (currentHeight == 0) {
+//       filterCatContent.style.maxHeight = `${catHeight}px`;
+//     } else {
+//       filterCatContent.style.maxHeight = `0px`;
+//     }
+//     let currentIcon = catIcon.getAttribute("class");
+//     if (currentIcon == "fa-solid fa-plus") {
+//       catIcon.setAttribute("class", "fa-solid fa-minus");
+//     } else {
+//       catIcon.setAttribute("class", "fa-solid fa-plus");
+//     }
+//   });
+// });
+
+// let filterisOpen = false;
+
+// filterKnap.addEventListener("click", () => {
+//   if (!isOpen) {
+//     filterMenu.style.transform = "translateY(0px)";
+//     isOpen = true;
+//   } else {
+//     let filterMenuHeight = filterMenu.clientHeight;
+//     filterMenu.style.transform = `translateY(-${filterMenuHeight}px)`;
+//     isOpen = false;
+//   }
+// });

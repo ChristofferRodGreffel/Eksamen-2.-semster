@@ -86,3 +86,29 @@ burger.addEventListener("click", () => {
     isOpen = false;
   }
 });
+
+// HOLD SIDE FILTRE KNAP
+
+const filterKnap = document.querySelector("filter-knap");
+const filterMenu = document.querySelector("filter-menu");
+const filterCategory = document.querySelectorAll(".filter-category");
+
+category.forEach((filterCat) => {
+  const filterCatContent = filterCat.querySelector(".filter-cat-content");
+  filterCatContent.addEventListener("click", (el) => {
+    el.stopPropagation();
+  });
+});
+
+let filterisOpen = false;
+
+filterKnap.addEventListener("click", () => {
+  if (!isOpen) {
+    filterMenu.style.transform = "translateY(0px)";
+    isOpen = true;
+  } else {
+    let filterMenuHeight = filterMenu.clientHeight;
+    filterMenu.style.transform = `translateY(-${filterMenuHeight}px)`;
+    isOpen = false;
+  }
+});

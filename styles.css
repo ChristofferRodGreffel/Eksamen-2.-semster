@@ -477,44 +477,65 @@ main {
 
 /* --filter knap------------------------------------- */
 
-#filtre-btn{
+#filter-knap{
   color:white;
   background-color: #BEAC76;
   border-radius: 20px;
-  width: 10vw;
+  width: 8vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 10vh;
-  padding: 0.5%;
+  padding: 1%;
 }
 
-/* #filtre-dropdown {
-  position: relative;
-  display: inline-block;
+.filter-category {
+  text-align: center;
 }
 
-.filtre-dropdown-content {
-  display: none;
+.filter-cat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.filter-cat-title h1 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+.filter-cat-title i {
+  font-size: 18pt;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  right: 25px;
 }
 
-.dropdown-content button {
+/* Category content */
+
+.filter-cat-content {
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.filter-cat-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #f3eee7;
+}
+.filter-cat-content div i {
+  right: 25px;
+}
+.filter-cat-content a {
+  padding: 25px;
+  font-weight: 100;
   color: black;
-  padding: 12px 16px;
   text-decoration: none;
-  display: block;
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
 }
-
-.filtre-dropdown-content button:hover {background-color: #f1f1f1}
-
-.filtre-dropdown:hover .filtre-dropdown-content {
-  display: block;
-} */
 
 
 
@@ -528,7 +549,7 @@ main {
 
 .hold-card{ 
   background-color:white;
-  width: 20vw;
+  width: 17vw;
   text-align: center;
   border-radius: 20px;
 }
@@ -542,16 +563,18 @@ main {
 .hold-card .content{
   display: flex;
   justify-content: space-around;
-  margin: 5%;
+  font-size: 1.5vh;
 }
+
 .hold-card .content hr{
   border: #796b3f solid 1px;
+  height: 16vh;
 } 
 .hold-card .content-left{
-  padding:0vw 2vw 0vw 2vw;
+  padding:0vw 0.5vw 0vw 0.5vw;
 }
 .hold-card .content-right{
-  padding:0vw 2vw 0vw 2vw;
+  padding:0vw 0.5vw 0vw 0.5vw;
 }
 .content-right p{
   padding:0.5vh 0vh 0.5vh 0vh;
@@ -745,6 +768,12 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   #teams img {
     width: 100%;
   }
+
+/* Hold cards */
+.hold-card-row{ 
+}
+
+
 
   /* FOOTER */
   footer {

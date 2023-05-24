@@ -75,10 +75,10 @@ nav img {
 
 /* Burgermenu */
 #burgermenu {
+  transform: translateY(-600px);
   width: 100%;
   position: absolute;
   transition: 0.8s ease-in-out;
-  transform: translateY(-500px);
   overflow-y: auto;
   max-height: calc(100dvh - 100px);
 }
@@ -88,12 +88,18 @@ nav img {
 }
 
 .cat-title {
+  text-decoration: none;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px;
   background-color: #fdf7f0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.cat-title:last-of-type {
+  color: white;
+  background-color: #796b3f;
 }
 .cat-title h1 {
   font-size: 18pt;

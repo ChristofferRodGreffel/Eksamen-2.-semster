@@ -43,6 +43,7 @@ nav img {
 }
 
 #mobile-dropsystem {
+  display: none;
   z-index: 1000;
   position: sticky;
   top: 0;
@@ -324,7 +325,7 @@ video {
   object-fit: cover;
 }
 #drone-video div {
-  backdrop-filter: brightness(50%);
+  /* backdrop-filter: brightness(50%); */
   height: 100%;
   width: 100%;
   display: flex;
@@ -383,6 +384,25 @@ main {
 
 #history {
   display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-top: 80px;
+}
+#history div {
+  width: 40%;
+}
+#history div h1 {
+  margin-bottom: 20px;
+  font-size: 30pt;
+  line-height: 40px;
+}
+#history img {
+  border-radius: 20px;
+}
+
+/* #history {
+  display: flex;
   justify-content: center;
   margin: auto;
   padding-top: 5vw;
@@ -392,9 +412,9 @@ main {
   height: 300px;
 }
 
-#image {
+.image {
   border-radius: 30px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -408,35 +428,30 @@ main {
   padding-left: 50px;
   padding-right: 50px;
   width: 25vw;
-}
+} */
 
 /* Faciliteter */
 
 #facilities {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #f3eee7;
-  padding: 100px;
   margin-top: 50px;
+  padding: 100px 0px 100px 0px;
 }
 
-#vr {
-  margin: auto;
-  width: 40%;
-  border-right: 3px solid black;
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-  height: 10vw;
-}
-
-#vr h1 {
-  padding-top: 3vw;
+#facilities hr {
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 #listfacilities {
-  padding-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
 }
 
 .listdirection {
@@ -445,12 +460,18 @@ main {
 }
 
 .listdirection img {
+  position: relative;
+  top: 5px;
   padding-right: 10px;
 }
 
 #splitsections {
+  overflow: hidden;
   position: relative;
   top: -5vw;
+}
+#splitsections img {
+  width: 102%;
 }
 
 /* Undervisning og aktiviteter */
@@ -471,7 +492,7 @@ main {
 }
 
 /* --HOLD STYLES------------------------------------- */
-#main-hold{ 
+#main-hold {
   margin: 0vh 5vw 0vh 5vw;
 }
 
@@ -554,13 +575,12 @@ main {
   border-radius: 20px;
 }
 
-.hold-card img{ 
+.hold-card img {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
 }
 
-
-.hold-card .content{
+.hold-card .content {
   display: flex;
   justify-content: space-around;
   font-size: 1.5vh;
@@ -576,35 +596,33 @@ main {
 .hold-card .content-right{
   padding:0vw 0.5vw 0vw 0.5vw;
 }
-.content-right p{
-  padding:0.5vh 0vh 0.5vh 0vh;
+.hold-card .content-right {
+  padding: 0vw 2vw 0vw 2vw;
 }
-.hold-card .content-left-info{ 
+.content-right p {
+  padding: 0.5vh 0vh 0.5vh 0vh;
+}
+.hold-card .content-left-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 7vw;
-  padding:0.5vh 0vh 0.5vh 0vh;
+  padding: 0.5vh 0vh 0.5vh 0vh;
 }
 
-.hold-card .content-left-info i{ 
+.hold-card .content-left-info i {
   color: #554c2f;
 }
 
-.hold-card .tilmeld-cta{ 
-  background-color:#BEAC76;
+.hold-card .tilmeld-cta {
+  background-color: #beac76;
   border-radius: 0px 0px 20px 20px;
-  padding:5%;
+  padding: 5%;
 }
-.hold-card .tilmeld-cta a{ 
+.hold-card .tilmeld-cta a {
   text-decoration: none;
   color: white;
 }
-
-
-
-
-
 
 /* --FOOTER STYLES------------------------------------- */
 footer {
@@ -743,6 +761,9 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   #mobile-header {
     display: flex;
   }
+  #mobile-dropsystem {
+    display: block;
+  }
 
   /* FORSIDE */
   #hero {
@@ -816,6 +837,44 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   /* Bestyrelsens titler */
   .bestyrelse-p-title {
     font-size: 10pt;
+  }
+
+  /* OM RIDEKLUBBEN */
+
+  #history {
+    flex-direction: column;
+    width: 85%;
+  }
+  #history div {
+    width: 100%;
+  }
+  #history img {
+    margin-top: 30px;
+  }
+
+  #facilities {
+    flex-direction: column;
+  }
+  #facilities h1 {
+    font-size: 25pt;
+    margin-bottom: 30px;
+  }
+  #facilities hr {
+    display: none;
+  }
+  #listfacilities {
+    width: 80%;
+  }
+
+  #activities {
+    flex-direction: column;
+    gap: 50px;
+    width: 85%;
+    margin-bottom: 50px;
+  }
+  #leftbox,
+  #rightbox {
+    width: 100%;
   }
 }
 
@@ -897,5 +956,3 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     margin-bottom: -4vw;
   }
 }
-
-

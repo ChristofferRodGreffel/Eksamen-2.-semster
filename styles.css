@@ -711,7 +711,6 @@ footer h4 {
 
 /* ---------------- TILMELDING-------- */
 
-
 .step-1-3{
 margin-top: 2vw;
 margin-bottom: 7vw;
@@ -727,12 +726,16 @@ margin-bottom: 7vw;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
-    font-size: 50px;
+    font-size: 30pt;
     color: #f3eee7;
     text-align: center;
     background-color: #796b3f;
     margin-left: 15vw;
-}
+    transition: 0.1s ease-in-out;
+  }
+  .circle-step-1-3:hover, .circle-step-2:hover {
+    background-color: #554c2f;
+  }
 
 .circle-step-2{
   width: 20vw;
@@ -743,6 +746,7 @@ margin-bottom: 7vw;
   text-align: center;
   background-color: #796b3f;
   margin-left: 57vw;
+  transition: 0.1s ease-in-out;
 }
 
   .circle-step-1-3 h1, .circle-step-2 h1{
@@ -778,9 +782,8 @@ margin-bottom: 7vw;
 
   /* De 3 heste i bunden */
   #horses{
-    width: 70%;
     margin-left: 15vw;
-    margin-right: 20vw;
+    margin-right: 15vw;
     margin-bottom: -10vw;
   }
 
@@ -830,6 +833,19 @@ margin-bottom: 7vw;
   }
 
 /* ---------------- HESTENE / BESTYRELSE STYLES-------- */
+
+/* Test */
+#loginPanel {
+  color: #000;
+  cursor:pointer;
+}
+
+#userNav {
+  width: 200px;
+  height: 200px;
+  display: none;
+  background: #ff0000;
+}
 
 /* Overskrift */
 .hestene-bestyrelse-h1 {
@@ -958,7 +974,7 @@ men værdierne er anderledes og tilpasset efter mockuppen */
 
   /* Overskrift på siden */
   .hestene-bestyrelse-h1 {
-    font-size: 12pt;
+    font-size: 18pt;
   }
 
   .hestene-bestyrelse-p {
@@ -1027,79 +1043,69 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     width: 85%;
     padding: 0;
   }
+
+  
+  /* TILMELDING */
+  .step-1-3{
+    margin-bottom: 5vw;
+    }
+  
+    .step-2{
+      background-color: #fdf7f0;
+      height: 70%;
+      width: 100%;
+      margin-bottom: 15vw;
+    }
+
+    .circle-step-1-3, .circle-step-2{
+      width: 35vw;
+      height: 35vw;
+      margin-left: 35vw;
+  }
+    
+    .circle-step-1-3 h1, .circle-step-2 h1{
+      font-size: 18pt;
+      padding-top: 14vw;
+    }
+    
+    .step-1-3-text, .step-2-text{
+      margin-top: 5vw;
+      margin-left: 10vw;
+      max-width: 85vw;
+    }
+
+    .step-1-3-text h1, .step-2-text h1{
+      font-size: 18pt;
+    }
+    
+    .step-1-3-text p, .step-2-text p{
+      font-size: 14pt;
+    } 
+
+    #horses {
+        width: 80%;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
 }
+
 
 /* Media queries 570px */
 @media screen and (max-width: 570px) {
 
-      /* Tilmeldings-site */
-      .step-1-3{
-        margin-top: 2vw;
-        margin-bottom: 7vw;
-        width: 100%;
-        margin-left: 50%;
-        margin-right: 50%;
-        }
-        
-        .step-2{
-          background-color: #f3eee7;
-          height: 50%;
-          padding-top: 5vw;
-          width: 100%;
-          margin-right: 40vw;
-        }
-        
-        .circle-step-1-3{
-            width: 50vw;
-            height: 50vw;
-            border-radius: 50%;
-            font-size: 50pt;
-        }
-        
-        .circle-step-2{
-          width: 50vw;
-          height: 50vw;
-        }
-        
-          .circle-step-1-3 h1, .circle-step-2 h1{
-          color: rgb(255, 255, 255);
-          font-size: 30pt;
-          padding-top: 17vw;
-        }
-        
-        .step-1-3-text{
-          margin-left: 10vw;
-          margin-left: 10vw;
-          margin-top: 1vw;
-        }
-        
-        .step-2-text{
-          font-size: 14pt;
-        }
-        
-          .step-1-3-text h1, .step-2-text h1{
-          color: rgb(0, 0, 0);
-          font-size: 16pt;
-          }
-        
-          .step-1-3-text p, .step-2-text p{
-            font-size: 12pt;
-          } 
-        
-          /* De 3 heste i bunden */
-          #horses{
-            width: 70%;
-            margin-left: 15vw;
-            margin-right: 20vw;
-            margin-bottom: -10vw;
-          }
+      /* -------------- TILMELDING -------- */
+
+      /* Identisk med breakpoint ved 1080px
   
-      /* 404 siden */
+      /* ------------------404 siden------------- */
+
+
   
   /* BESTYRELSEN OG HESTENE SIDER */
   /* Overskrift på siden */
   .hestene-bestyrelse-h1 {
-    font-size: 14pt;
+    font-size: 18pt;
   }
 
   .hestene-bestyrelse-p {

@@ -791,18 +791,19 @@ margin-bottom: 7vw;
 
   .div-404{
     margin-bottom: 5vw;
+    margin-top: 3vw;
   }
 
   .div-404 img{
-    width: 30%;
-    margin-left: 18vw;
+    width: 300px;
+    height: 300px;
+    margin-left: 25vw;
   }
 
   .text-404{
     margin-left: 50vw;
     margin-top: -17vw;
     z-index: 1;
-    max-width: 40vw;
     color: black;
     margin-bottom: 2vw;
 }
@@ -827,10 +828,7 @@ margin-bottom: 7vw;
     border-radius: 15px;
     transition: 0.1s ease-in-out;
   }
-  
-  #cta-404:hover {
-    background-color: #554c2f;
-  }
+
 
 /* ---------------- HESTENE / BESTYRELSE STYLES-------- */
 
@@ -1088,20 +1086,42 @@ men værdierne er anderledes og tilpasset efter mockuppen */
         margin-right: 10vw;
     }
 
-}
+     /* ---------------- 404 - side----------------- */
+     /* Ingen ændringer */
+
+    }
 
 
 /* Media queries 570px */
 @media screen and (max-width: 570px) {
 
       /* -------------- TILMELDING -------- */
-
-      /* Identisk med breakpoint ved 1080px
-  
-      /* ------------------404 siden------------- */
+      /* Igen ændringer */
 
 
   
+ /* ---------------- 404 - side----------------- */
+ .div-404{
+  margin-bottom: 10vw;
+}
+
+.div-404 img{
+  margin-left: 18vw;
+  height: 200px;
+  width: 200px;
+}
+
+.text-404{
+  margin-left: 10vw;
+  margin-top: 5vw;
+}
+
+#cta-404 {
+  position: fixed;
+  margin-left: 10vw;
+  margin-top: 80vw;
+}
+
   /* BESTYRELSEN OG HESTENE SIDER */
   /* Overskrift på siden */
   .hestene-bestyrelse-h1 {

@@ -78,11 +78,11 @@ let isOpen = false;
 
 burger.addEventListener("click", () => {
   if (!isOpen) {
-    menu.style.transform = "translateY(0px)";
+    menu.style.transform = "translateY(0)";
     isOpen = true;
   } else {
     let menuHeight = menu.clientHeight;
-    menu.style.transform = `translateY(-${menuHeight}px)`;
+    menu.style.transform = `translateY(-100%)`;
     isOpen = false;
     category.forEach((cat) => {
       const catContent = cat.querySelector(".cat-content");

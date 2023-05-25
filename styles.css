@@ -75,11 +75,11 @@ nav img {
 
 /* Burgermenu */
 #burgermenu {
-  transform: translateY(-600px);
+  transform: translateY(-100%);
   width: 100%;
   position: absolute;
-  transition: 0.8s ease-in-out;
   overflow-y: auto;
+  transition: 0.8s ease-in-out;
   max-height: calc(100dvh - 100px);
 }
 

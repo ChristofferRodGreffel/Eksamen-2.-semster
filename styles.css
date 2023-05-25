@@ -383,11 +383,6 @@ video {
   border-radius: 20px;
 }
 
-/* Ignorer dette */
-main {
-  padding-bottom: 10%;
-}
-
 /* Historiesektionen */
 
 #history {
@@ -474,6 +469,7 @@ main {
 #main-hold {
   width: 85%;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 /* --filter knap------------------------------------- */
@@ -684,33 +680,34 @@ footer h4 {
 
 /* ---------------- TILMELDING-------- */
 
-.step-1-3{
-margin-top: 2vw;
-margin-bottom: 7vw;
+.step-1-3 {
+  margin-top: 2vw;
+  margin-bottom: 7vw;
 }
 
-.step-2{
+.step-2 {
   background-color: #f3eee7;
   height: 25vw;
   padding-top: 5vw;
 }
 
-.circle-step-1-3{
-    width: 20vw;
-    height: 20vw;
-    border-radius: 50%;
-    font-size: 30pt;
-    color: #f3eee7;
-    text-align: center;
-    background-color: #796b3f;
-    margin-left: 15vw;
-    transition: 0.1s ease-in-out;
-  }
-  .circle-step-1-3:hover, .circle-step-2:hover {
-    background-color: #554c2f;
-  }
+.circle-step-1-3 {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  font-size: 30pt;
+  color: #f3eee7;
+  text-align: center;
+  background-color: #796b3f;
+  margin-left: 15vw;
+  transition: 0.1s ease-in-out;
+}
+.circle-step-1-3:hover,
+.circle-step-2:hover {
+  background-color: #554c2f;
+}
 
-.circle-step-2{
+.circle-step-2 {
   width: 20vw;
   height: 20vw;
   border-radius: 50%;
@@ -722,13 +719,14 @@ margin-bottom: 7vw;
   transition: 0.1s ease-in-out;
 }
 
-  .circle-step-1-3 h1, .circle-step-2 h1{
+.circle-step-1-3 h1,
+.circle-step-2 h1 {
   color: rgb(255, 255, 255);
   font-size: 30pt;
   padding-top: 7vw;
 }
 
-.step-1-3-text{
+.step-1-3-text {
   margin-left: 38vw;
   margin-top: -17vw;
   z-index: 1;
@@ -736,7 +734,7 @@ margin-bottom: 7vw;
   color: black;
 }
 
-.step-2-text{
+.step-2-text {
   margin-left: 15vw;
   margin-top: -17vw;
   z-index: 1;
@@ -744,71 +742,67 @@ margin-bottom: 7vw;
   color: black;
 }
 
-  .step-1-3-text h1, .step-2-text h1{
+.step-1-3-text h1,
+.step-2-text h1 {
   color: rgb(0, 0, 0);
   font-size: 16pt;
-  }
-
-  .step-1-3-text p, .step-2-text p{
-    font-size: 12pt;
-  } 
-
-  /* De 3 heste i bunden */
-  #horses{
-    margin-left: 15vw;
-    margin-right: 15vw;
-    margin-bottom: -10vw;
-  }
-
-  /* ---------------- 404 - side----------------- */
-
-  .div-404{
-    margin-bottom: 5vw;
-    margin-top: 3vw;
-  }
-
-  .div-404 img{
-    width: 300px;
-    height: 300px;
-    margin-left: 25vw;
-  }
-
-  .text-404{
-    margin-left: 50vw;
-    margin-top: -17vw;
-    z-index: 1;
-    color: black;
-    margin-bottom: 2vw;
 }
 
-.text-404 h1{
-  font-size: 20pt;
+.step-1-3-text p,
+.step-2-text p {
+  font-size: 12pt;
 }
 
-.text-404 p{
+/* De 3 heste i bunden */
+#horses {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-bottom: -10vw;
+}
+
+/* ---------------- 404 - side----------------- */
+
+.div-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+
+.div-404 img {
+  width: 450px;
+}
+
+.text-404 h1 {
+  font-size: 35pt;
+}
+
+.text-404 p {
   font-size: 14pt;
 }
 
-  #cta-404 {
-    position: relative;
-    top: 3px;
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-    background-color: #7a6b3f;
-    padding: 3px 20px;
-    margin-left: 50vw;
-    border-radius: 15px;
-    transition: 0.1s ease-in-out;
-  }
-
+#cta-404 {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  background-color: #7a6b3f;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.1s ease-in-out;
+  margin-top: 30px;
+}
 
 /* ---------------- HESTENE / BESTYRELSE STYLES-------- */
+
+.content-container {
+  margin-bottom: 100px;
+}
 
 /* Test */
 #loginPanel {
   color: #000;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #userNav {
@@ -888,6 +882,11 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   border-radius: 10%;
 }
 
+.fa-phone {
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
 /* Media quiaries 1080px - IPad size*/
 @media screen and (max-width: 1080px) {
   /* HEADER */
@@ -939,7 +938,6 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     margin: auto;
     margin-bottom: 40px;
   }
-
 
   /* BESTYRELSEN OG HESTE SIDEN */
 
@@ -1015,85 +1013,69 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     padding: 0;
   }
 
-  
   /* TILMELDING */
-  .step-1-3{
+  .step-1-3 {
     margin-bottom: 5vw;
-    }
-  
-    .step-2{
-      background-color: #fdf7f0;
-      height: 70%;
-      width: 100%;
-      margin-bottom: 15vw;
-    }
-
-    .circle-step-1-3, .circle-step-2{
-      width: 35vw;
-      height: 35vw;
-      margin-left: 35vw;
   }
-    
-    .circle-step-1-3 h1, .circle-step-2 h1{
-      font-size: 18pt;
-      padding-top: 14vw;
-    }
-    
-    .step-1-3-text, .step-2-text{
-      margin-top: 5vw;
-      margin-left: 10vw;
-      max-width: 85vw;
-    }
 
-    .step-1-3-text h1, .step-2-text h1{
-      font-size: 18pt;
-    }
-    
-    .step-1-3-text p, .step-2-text p{
-      font-size: 14pt;
-    } 
+  .step-2 {
+    background-color: #fdf7f0;
+    height: 70%;
+    width: 100%;
+    margin-bottom: 15vw;
+  }
 
-    #horses {
-        width: 80%;
-        margin-left: 10vw;
-        margin-right: 10vw;
-    }
+  .circle-step-1-3,
+  .circle-step-2 {
+    width: 35vw;
+    height: 35vw;
+    margin-left: 35vw;
+  }
 
-     /* ---------------- 404 - side----------------- */
-     /* Ingen ændringer */
+  .circle-step-1-3 h1,
+  .circle-step-2 h1 {
+    font-size: 18pt;
+    padding-top: 14vw;
+  }
 
-    }
+  .step-1-3-text,
+  .step-2-text {
+    margin-top: 5vw;
+    margin-left: 10vw;
+    max-width: 85vw;
+  }
 
+  .step-1-3-text h1,
+  .step-2-text h1 {
+    font-size: 18pt;
+  }
+
+  .step-1-3-text p,
+  .step-2-text p {
+    font-size: 14pt;
+  }
+
+  #horses {
+    width: 80%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  /* ---------------- 404 - side----------------- */
+  .div-404 {
+    height: auto;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
 
 /* Media queries 570px */
 @media screen and (max-width: 570px) {
-
-      /* -------------- TILMELDING -------- */
-      /* Igen ændringer */
-
-
-  
- /* ---------------- 404 - side----------------- */
- .div-404{
-  margin-bottom: 10vw;
-}
-
-.div-404 img{
-  margin-left: 18vw;
-  height: 200px;
-  width: 200px;
-}
-
-.text-404{
-  margin-left: 10vw;
-  margin-top: 5vw;
-}
-
-#cta-404 {
-  position: fixed;
-  margin-left: 10vw;
-  margin-top: 80vw;
-}
+  /* -------------- TILMELDING -------- */
+  /* Igen ændringer */
 
   /* BESTYRELSEN OG HESTENE SIDER */
   /* Overskrift på siden */

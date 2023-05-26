@@ -384,6 +384,78 @@ video {
   border-radius: 20px;
 }
 
+/* Ignorer dette */
+main {
+  padding-bottom: 10%;
+}
+
+/* RIDEFYSIOTERAPI */
+
+/*Hero billede*/
+#heroridefysioterapi {
+  background-image: url(images/heroridefysioterapi.jpg);
+  background-size: cover;
+  width: auto;
+  height: calc(100vh - 110px);
+}
+
+#herobox {
+  background-color: #fdf7f0;
+  justify-content: center;
+  position: absolute;
+  top: 500px;
+  right: 0;
+  width: 500px;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#inforidefysioterapi {
+  display: flex;
+  justify-content: center;
+  background-color: #f3eee7;
+  height: 500px;
+}
+
+#ridefysioterapileft {
+  width: 25%;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+#ridefysioterapiright {
+  margin-top: 50px;
+  width: 25%;
+  margin-left: 100px;
+}
+
+#tilmeldingridefysioterapi {
+  display: flex;
+  justify-content: center;
+}
+
+#tilmeldingridefysioterapileft {
+  width: 30%;
+  margin-right: 100px;
+  position: relative;
+  bottom: 100px;
+}
+
+#tilmeldingridefysioterapiright {
+  width: 30%;
+  margin-left: 100px;
+  padding-top: 100px;
+}
+
+#rundtbillede {
+  border-radius: 50%;
+  border: 8px solid #796b3f;
+}
+
+/* OM RIDESKOLEN */
 /* Historiesektionen */
 
 #history {
@@ -407,6 +479,11 @@ video {
 
 #history a {
   color: #000;
+}
+#centersection {
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 25vw;
 }
 
 /* Faciliteter */
@@ -982,103 +1059,37 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     font-size: 10pt;
   }
 
-  /* OM RIDEKLUBBEN */
+  /* RIDEFYSIOTERAPI*/
 
-  #history {
-    flex-direction: column;
-    width: 85%;
-  }
-  #history div {
-    width: 100%;
-  }
-  #history img {
-    margin-top: 30px;
+  #heroridefysioterapi {
+    height: 50vw;
+    top: 200px;
   }
 
-  #facilities {
-    flex-direction: column;
-  }
-  #facilities h1 {
-    font-size: 25pt;
-    margin-bottom: 30px;
-  }
-  #facilities hr {
-    display: none;
-  }
-  #listfacilities {
-    width: 80%;
+  #herobox {
+    top: 350px;
   }
 
-  #activities {
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 50px;
-  }
-  #leftbox,
-  #rightbox {
-    width: 85%;
-    padding: 0;
+  #rundtbillede {
+    height: 350px;
   }
 
-  /* TILMELDING */
-  .step-1-3 {
-    margin-bottom: 5vw;
+  #tilmeldingridefysioterapiright {
+    padding-top: 20px;
   }
 
-  .step-2 {
-    background-color: #fdf7f0;
-    height: 70%;
-    width: 100%;
-    margin-bottom: 15vw;
+  #ridefysioterapileft {
+    width: 50%;
+    margin-left: 100px;
   }
 
-  .circle-step-1-3,
-  .circle-step-2 {
-    width: 35vw;
-    height: 35vw;
-    margin-left: 35vw;
+  #ridefysioterapiright {
+    width: 40%;
+    margin-right: 100px;
   }
 
-  .circle-step-1-3 h1,
-  .circle-step-2 h1 {
-    font-size: 18pt;
-    padding-top: 14vw;
-  }
-
-  .step-1-3-text,
-  .step-2-text {
-    margin-top: 5vw;
-    margin-left: 10vw;
-    max-width: 85vw;
-  }
-
-  .step-1-3-text h1,
-  .step-2-text h1 {
-    font-size: 18pt;
-  }
-
-  .step-1-3-text p,
-  .step-2-text p {
-    font-size: 14pt;
-  }
-
-  #horses {
-    width: 80%;
-    margin-left: 10vw;
-    margin-right: 10vw;
-  }
-
-  /* ---------------- 404 - side----------------- */
-  .div-404 {
-    height: auto;
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  #tilmeldingridefysioterapileft {
+    bottom: 50px;
   }
 }
 
@@ -1160,5 +1171,73 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   .bestyrelse-p-title {
     font-size: 6pt;
     margin-bottom: -4vw;
+  }
+
+  /* Retning ændres på info omkring ridefysioterapi*/
+  #inforidefysioterapi {
+    flex-direction: column;
+    height: 600px;
+  }
+
+  #ridefysioterapileft {
+    width: 80%;
+    margin: auto;
+    padding-top: 5vw;
+  }
+
+  #ridefysioterapiright {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 15vw;
+  }
+
+  /* Retning ændres på tilmelding til ridefysioterapi*/
+
+  #heroridefysioterapi {
+    height: 70vw;
+    top: 300px;
+  }
+
+  #herobox {
+    top: 250px;
+    width: 65%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #tilmeldingridefysioterapi {
+    flex-direction: column;
+  }
+  #rundtbillede {
+    height: 300px;
+    position: relative;
+    bottom: 50px;
+  }
+
+  #ridefysioterapileft {
+    margin-top: 30px;
+  }
+
+  #ridefysioterapiright {
+    margin-top: 15px;
+  }
+
+  #inforidefysioterapi {
+    height: 700px;
+  }
+
+  #tilmeldingridefysioterapileft {
+    width: 90%;
+    margin: auto;
+    margin-right: 0px;
+    position: static;
+    bottom: 50px;
+  }
+
+  #tilmeldingridefysioterapiright {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 0px;
   }
 }

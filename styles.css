@@ -404,6 +404,10 @@ video {
   border-radius: 20px;
 }
 
+#history a{
+  color: #000;
+}
+
 /* Faciliteter */
 
 #facilities {
@@ -546,7 +550,7 @@ video {
   justify-content: space-between;
   height: 380px;
   background-color: white;
-  width: 300px;
+  width: 280px;
   text-align: left;
   border-radius: 20px;
 }

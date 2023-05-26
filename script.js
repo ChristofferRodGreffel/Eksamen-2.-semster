@@ -57,7 +57,7 @@ category.forEach((cat) => {
     el.stopPropagation();
   });
   const catIcon = cat.querySelector("i");
-  cat.addEventListener("click", (el) => {
+  cat.addEventListener("click", () => {
     let catHeight = catContent.scrollHeight;
     let currentHeight = catContent.clientHeight;
     if (currentHeight == 0) {
@@ -81,7 +81,6 @@ burger.addEventListener("click", () => {
     menu.style.transform = "translateY(0)";
     isOpen = true;
   } else {
-    let menuHeight = menu.clientHeight;
     menu.style.transform = `translateY(-100%)`;
     isOpen = false;
     category.forEach((cat) => {

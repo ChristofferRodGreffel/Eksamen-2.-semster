@@ -1,25 +1,28 @@
 // Splide
-let slideAmount;
 
-function checkWidth() {
-  if (window.innerWidth > 1500) {
-    slideAmount = 4;
-  } else if (window.innerWidth > 1080) {
-    slideAmount = 3;
-  } else if (window.innerWidth > 850) {
-    slideAmount = 2;
-  } else {
-    slideAmount = 1;
+if (document.title === "Sportsrideklubben Silkeborg") {
+  let slideAmount;
+
+  function checkWidth() {
+    if (window.innerWidth > 1500) {
+      slideAmount = 4;
+    } else if (window.innerWidth > 1080) {
+      slideAmount = 3;
+    } else if (window.innerWidth > 850) {
+      slideAmount = 2;
+    } else {
+      slideAmount = 1;
+    }
+    return slideAmount;
   }
-  return slideAmount;
+
+  let splide = new Splide(".splide", {
+    type: "loop",
+    perPage: checkWidth(),
+  });
+
+  splide.mount();
 }
-
-let splide = new Splide(".splide", {
-  type: "loop",
-  perPage: checkWidth(),
-});
-
-splide.mount();
 
 // Header collapse
 const logo = document.querySelector("nav img");
@@ -27,7 +30,7 @@ const header = document.querySelector("header");
 
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
   if (currentScrollPos > 500) {
     if (prevScrollpos > currentScrollPos) {
       header.style.top = "0";
@@ -41,3 +44,51 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
   }
 };
+
+// Burgermenu mobile
+
+const burger = document.querySelector(".fa-bars");
+const menu = document.querySelector("#burgermenu");
+const category = document.querySelectorAll(".category");
+
+category.forEach((cat) => {
+  const catContent = cat.querySelector(".cat-content");
+  catContent.addEventListener("click", (el) => {
+    el.stopPropagation();
+  });
+  const catIcon = cat.querySelector("i");
+  cat.addEventListener("click", (el) => {
+    let catHeight = catContent.scrollHeight;
+    let currentHeight = catContent.clientHeight;
+    if (currentHeight == 0) {
+      catContent.style.maxHeight = `${catHeight}px`;
+    } else {
+      catContent.style.maxHeight = `0px`;
+    }
+    let currentIcon = catIcon.getAttribute("class");
+    if (currentIcon == "fa-solid fa-plus") {
+      catIcon.setAttribute("class", "fa-solid fa-minus");
+    } else {
+      catIcon.setAttribute("class", "fa-solid fa-plus");
+    }
+  });
+});
+
+let isOpen = false;
+
+burger.addEventListener("click", () => {
+  if (!isOpen) {
+    menu.style.transform = "translateY(0)";
+    isOpen = true;
+  } else {
+    let menuHeight = menu.clientHeight;
+    menu.style.transform = `translateY(-100%)`;
+    isOpen = false;
+    category.forEach((cat) => {
+      const catContent = cat.querySelector(".cat-content");
+      const catIcon = cat.querySelector(".cat-title i");
+      catIcon.setAttribute("class", "fa-solid fa-plus");
+      catContent.style.maxHeight = `0px`;
+    });
+  }
+});

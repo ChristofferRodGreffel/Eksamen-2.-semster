@@ -42,6 +42,13 @@ nav img {
   transition: 0.2s ease-in-out;
 }
 
+#mobile-dropsystem {
+  display: none;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
 #mobile-header {
   z-index: 1000;
   background-color: #fdf7f0;
@@ -49,23 +56,91 @@ nav img {
   display: none;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
-  height: 50px;
+  height: 100px;
   position: sticky;
   top: 0;
 }
 #mobile-header img {
   position: relative;
-  top: 25px;
+  top: 20px;
+  padding-left: 30px;
   width: 110px;
 }
 #mobile-header i {
+  align-self: flex-end;
   color: #7a6b3f;
+  padding: 30px;
   font-size: 25pt;
+}
+
+/* Burgermenu */
+#burgermenu {
+  transform: translateY(-100%);
+  width: 100%;
+  position: absolute;
+  overflow-y: auto;
+  transition: 0.8s ease-in-out;
+  max-height: calc(100dvh - 100px);
+}
+
+.category {
+  text-align: center;
+}
+
+.cat-title {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.cat-title:last-of-type {
+  color: white;
+  background-color: #796b3f;
+}
+.cat-title h1 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+.cat-title i {
+  font-size: 18pt;
+  position: absolute;
+  right: 25px;
+}
+
+/* Category content */
+
+.cat-content {
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.cat-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #f3eee7;
+}
+.cat-content div i {
+  right: 25px;
+}
+.cat-content a {
+  padding: 25px;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
 }
 
 /* Dropdown */
 .dropbtn {
+  text-decoration: none;
+  color: black;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -258,7 +333,7 @@ video {
   object-fit: cover;
 }
 #drone-video div {
-  backdrop-filter: brightness(50%);
+  /* backdrop-filter: brightness(50%); */
   height: 100%;
   width: 100%;
   display: flex;
@@ -383,28 +458,23 @@ main {
 /* OM RIDESKOLEN */
 /* Historiesektionen */
 
-#history{
+#history {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 80%;
   margin: auto;
-  padding-top: 5vw;
+  margin-top: 100px;
 }
-
-#historytext{
-  height: 300px;
+#history div {
+  width: 40%;
 }
-
-#image {
-  border-radius: 30px;
-  width: 100%;
-  height: auto;
+#history div h1 {
+  margin-bottom: 20px;
+  font-size: 30pt;
+  line-height: 40px;
 }
-
-#imagecenter {
-  border-radius: 30px;
-  max-width: 100%;
-  height: auto;
-
+#history img {
+  border-radius: 20px;
 }
 
 #centersection {
@@ -415,31 +485,26 @@ main {
 
 /* Faciliteter */
 
-#facilities{
+#facilities {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: #F3EEE7;
-  padding: 100px;
+  background-color: #f3eee7;
   margin-top: 50px;
+  padding: 100px 0px 100px 0px;
 }
 
-#vr{
-  margin: auto;
-  width: 40%;
-  border-right: 3px solid black;
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-  height: 10vw;
-}
-
-#vr h1 {
-  padding-top: 3vw;
+#facilities hr {
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 #listfacilities {
-  padding-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
 }
 
 .listdirection {
@@ -448,17 +513,22 @@ main {
 }
 
 .listdirection img {
+  position: relative;
+  top: 5px;
   padding-right: 10px;
 }
 
-#splitsections{
+#splitsections {
+  overflow: hidden;
   position: relative;
   top: -5vw;
 }
-
+#splitsections img {
+  width: 102%;
+}
 
 /* Undervisning og aktiviteter */
-#activities{
+#activities {
   display: flex;
   justify-content: center;
   width: 80%;
@@ -474,6 +544,162 @@ main {
   width: 70%;
 }
 
+/* --HOLD STYLES------------------------------------- */
+#main-hold {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+/* --filter knap------------------------------------- */
+
+#filter-knap {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  color: white;
+  background-color: #beac76;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 5vh;
+  padding: 8px 30px;
+}
+
+.filter-category {
+  text-align: center;
+}
+
+.filter-cat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: #fdf7f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.111);
+}
+.filter-cat-title h1 {
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+/* Category content */
+
+.filter-cat-content {
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.filter-cat-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15pt;
+  background-color: #f3eee7;
+}
+.filter-cat-content div i {
+  right: 25px;
+}
+.filter-cat-content a {
+  padding: 25px;
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.111);
+}
+
+/* --Cards------------------------------------- */
+
+.card-container {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hold-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;
+  background-color: white;
+  width: 300px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.hold-card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hold-card h3 {
+  padding-left: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5vh;
+  padding-left: 20px;
+}
+
+.content hr {
+  border: #796b3f solid 1.5px;
+  border-radius: 10px;
+  height: 100px;
+  align-self: center;
+}
+
+.content-right {
+  font-size: 10pt;
+  width: 50%;
+}
+.content-right p {
+  width: 80%;
+  margin: auto;
+  line-height: 15px;
+}
+
+.content-left-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+}
+.content-left-info p {
+  font-size: 10pt;
+}
+
+.content-left-info i {
+  color: #554c2f;
+  font-size: 15pt;
+}
+.content-left-info .fa-user-group {
+  font-size: 13pt;
+}
+
+.tilmeld-cta {
+  text-align: center;
+  font-size: 15pt;
+  background-color: #beac76;
+  border-radius: 0px 0px 20px 20px;
+  padding: 10px;
+  transition: 0.05s ease-in-out;
+}
+.tilmeld-cta:hover {
+  background-color: #796b3f;
+}
+
+.tilmeld-cta {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
 
 /* --FOOTER STYLES------------------------------------- */
 footer {
@@ -531,7 +757,143 @@ footer h4 {
   font-size: 20px;
 }
 
-/* Her starter Hestene/Bestyrelsen */
+/* ---------------- TILMELDING-------- */
+
+.step-1-3 {
+  margin-top: 2vw;
+  margin-bottom: 7vw;
+}
+
+.step-2 {
+  background-color: #f3eee7;
+  height: 25vw;
+  padding-top: 5vw;
+}
+
+.circle-step-1-3 {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  font-size: 30pt;
+  color: #f3eee7;
+  text-align: center;
+  background-color: #796b3f;
+  margin-left: 15vw;
+  transition: 0.1s ease-in-out;
+}
+.circle-step-1-3:hover,
+.circle-step-2:hover {
+  background-color: #554c2f;
+}
+
+.circle-step-2 {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #f3eee7;
+  text-align: center;
+  background-color: #796b3f;
+  margin-left: 57vw;
+  transition: 0.1s ease-in-out;
+}
+
+.circle-step-1-3 h1,
+.circle-step-2 h1 {
+  color: rgb(255, 255, 255);
+  font-size: 30pt;
+  padding-top: 7vw;
+}
+
+.step-1-3-text {
+  margin-left: 38vw;
+  margin-top: -17vw;
+  z-index: 1;
+  max-width: 40vw;
+  color: black;
+}
+
+.step-2-text {
+  margin-left: 15vw;
+  margin-top: -17vw;
+  z-index: 1;
+  max-width: 40vw;
+  color: black;
+}
+
+.step-1-3-text h1,
+.step-2-text h1 {
+  color: rgb(0, 0, 0);
+  font-size: 16pt;
+}
+
+.step-1-3-text p,
+.step-2-text p {
+  font-size: 12pt;
+}
+
+/* De 3 heste i bunden */
+#horses {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-bottom: -10vw;
+}
+
+/* ---------------- 404 - side----------------- */
+
+.div-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100dvh - 110px);
+}
+
+.div-404 img {
+  width: 450px;
+}
+
+.text-404 h1 {
+  font-size: 35pt;
+}
+
+.text-404 p {
+  font-size: 14pt;
+}
+
+#cta-404 {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  background-color: #7a6b3f;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.1s ease-in-out;
+  margin-top: 30px;
+}
+
+#cta-404:hover {
+  background-color: #554c2f;
+}
+
+/* ---------------- HESTENE / BESTYRELSE STYLES-------- */
+
+.content-container {
+  margin-bottom: 100px;
+}
+
+/* Test */
+#loginPanel {
+  color: #000;
+  cursor: pointer;
+}
+
+#userNav {
+  width: 200px;
+  height: 200px;
+  display: none;
+  background: #ff0000;
+}
 
 /* Overskrift */
 .hestene-bestyrelse-h1 {
@@ -603,6 +965,11 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   border-radius: 10%;
 }
 
+.fa-phone {
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
 /* Media quiaries 1080px - IPad size*/
 @media screen and (max-width: 1080px) {
   /* HEADER */
@@ -611,6 +978,9 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   }
   #mobile-header {
     display: flex;
+  }
+  #mobile-dropsystem {
+    display: block;
   }
 
   /* FORSIDE */
@@ -638,6 +1008,10 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     width: 100%;
   }
 
+  /* Hold cards */
+  /* .hold-card-row {
+  } */
+
   /* FOOTER */
   footer {
     flex-direction: column;
@@ -652,7 +1026,7 @@ men værdierne er anderledes og tilpasset efter mockuppen */
 
   /* Overskrift på siden */
   .hestene-bestyrelse-h1 {
-    font-size: 12pt;
+    font-size: 18pt;
   }
 
   .hestene-bestyrelse-p {
@@ -721,11 +1095,13 @@ men værdierne er anderledes og tilpasset efter mockuppen */
 
 /* Media queries 570px */
 @media screen and (max-width: 570px) {
-  /* BESTYRELSEN OG HESTENE SIDER */
+  /* -------------- TILMELDING -------- */
+  /* Igen ændringer */
 
+  /* BESTYRELSEN OG HESTENE SIDER */
   /* Overskrift på siden */
   .hestene-bestyrelse-h1 {
-    font-size: 14pt;
+    font-size: 18pt;
   }
 
   .hestene-bestyrelse-p {

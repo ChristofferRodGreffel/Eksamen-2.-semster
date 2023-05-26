@@ -724,11 +724,12 @@ footer h4 {
   padding-bottom: 1vh;
 }
 
-/* Denne div lagde sig vandret, derfor flex columme */
-#footer-betingelser {
+#footer-links {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+}
+#footer-links a:hover {
+  text-decoration: underline;
 }
 
 #footer-betingelser a {

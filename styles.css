@@ -216,6 +216,7 @@ nav img {
   position: absolute;
   right: 0;
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   color: white;
   height: calc(100vh - 110px);
   width: 35vw;
@@ -404,7 +405,7 @@ video {
   border-radius: 20px;
 }
 
-#history a{
+#history a {
   color: #000;
 }
 

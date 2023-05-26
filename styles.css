@@ -758,25 +758,34 @@ footer h4 {
 /* ---------------- TILMELDING-------- */
 
 .step-1-3 {
-  margin-top: 2vw;
-  margin-bottom: 7vw;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .step-2 {
+  height: 500px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
   background-color: #f3eee7;
-  height: 25vw;
-  padding-top: 5vw;
 }
 
 .circle-step-1-3 {
-  width: 20vw;
-  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   font-size: 30pt;
   color: #f3eee7;
   text-align: center;
   background-color: #796b3f;
-  margin-left: 15vw;
   transition: 0.1s ease-in-out;
 }
 .circle-step-1-3:hover,
@@ -785,14 +794,16 @@ footer h4 {
 }
 
 .circle-step-2 {
-  width: 20vw;
-  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   font-size: 50px;
   color: #f3eee7;
   text-align: center;
   background-color: #796b3f;
-  margin-left: 57vw;
   transition: 0.1s ease-in-out;
 }
 
@@ -800,22 +811,17 @@ footer h4 {
 .circle-step-2 h1 {
   color: rgb(255, 255, 255);
   font-size: 30pt;
-  padding-top: 7vw;
 }
 
 .step-1-3-text {
-  margin-left: 38vw;
-  margin-top: -17vw;
   z-index: 1;
-  max-width: 40vw;
+  width: 40%;
   color: black;
 }
 
 .step-2-text {
-  margin-left: 15vw;
-  margin-top: -17vw;
   z-index: 1;
-  max-width: 40vw;
+  width: 40%;
   color: black;
 }
 
@@ -832,9 +838,9 @@ footer h4 {
 
 /* De 3 heste i bunden */
 #horses {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-bottom: -10vw;
+  display: block;
+  width: 70%;
+  margin: auto;
 }
 
 /* ---------------- 404 - side----------------- */
@@ -843,7 +849,7 @@ footer h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100dvh - 110px);
+  height: calc(100dvh - 100px);
   overflow: hidden;
 }
 
@@ -897,7 +903,7 @@ footer h4 {
 /* Overskrift */
 .hestene-bestyrelse-h1 {
   text-align: center;
-  margin-top: 5vw;
+  margin-top: 50px;
 }
 
 .hestene-bestyrelse-p {
@@ -1007,10 +1013,6 @@ men værdierne er anderledes og tilpasset efter mockuppen */
     width: 100%;
   }
 
-  /* Hold cards */
-  /* .hold-card-row {
-  } */
-
   /* FOOTER */
   footer {
     flex-direction: column;
@@ -1086,6 +1088,41 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   #tilmeldingridefysioterapileft {
     bottom: 50px;
   }
+
+  /* -------------- TILMELDING -------- */
+  .step-1-3 {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .step-2 {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .step-1-3-text {
+    width: 80%;
+  }
+  .step-2-text {
+    width: 80%;
+  }
+  .circle-step-1-3 {
+    width: 250px;
+    height: 250px;
+  }
+  .circle-step-2 {
+    width: 250px;
+    height: 250px;
+  }
+  #horses {
+    width: 90%;
+  }
+
+  /* 404 Page */
+  .div-404 {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* Media queries 570px */
@@ -1096,7 +1133,7 @@ men værdierne er anderledes og tilpasset efter mockuppen */
   /* BESTYRELSEN OG HESTENE SIDER */
   /* Overskrift på siden */
   .hestene-bestyrelse-h1 {
-    font-size: 18pt;
+    font-size: 20pt;
   }
 
   .hestene-bestyrelse-p {

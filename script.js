@@ -47,7 +47,6 @@ window.onscroll = function () {
 
 // Burgermenu mobile
 
-const burger = document.querySelector(".fa-bars");
 const menu = document.querySelector("#burgermenu");
 const category = document.querySelectorAll(".category");
 
@@ -74,6 +73,7 @@ category.forEach((cat) => {
   });
 });
 
+const burger = document.querySelector(".fa-bars");
 let isOpen = false;
 
 burger.addEventListener("click", () => {

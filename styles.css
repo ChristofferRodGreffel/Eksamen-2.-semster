@@ -602,19 +602,18 @@ video {
 }
 
 /* --HOLD STYLES------------------------------------- */
-#main-hold {
+
+#all-cards {
   width: 85%;
   margin: auto;
-  margin-bottom: 100px;
 }
-
-/* --Cards------------------------------------- */
 
 .card-container {
   display: flex;
-  justify-content: left;
   flex-wrap: wrap;
   gap: 30px;
+  margin: auto;
+  margin-bottom: 100px;
 }
 
 .hold-card {

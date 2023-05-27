@@ -75,6 +75,7 @@ nav img {
 
 /* Burgermenu */
 #burgermenu {
+  display: none;
   transform: translateY(-100%);
   width: 100%;
   position: absolute;
@@ -604,7 +605,7 @@ video {
 /* --HOLD STYLES------------------------------------- */
 
 #all-cards {
-  width: 85%;
+  width: 90%;
   margin: auto;
 }
 
@@ -1126,11 +1127,11 @@ men værdierne er anderledes og tilpasset efter mockuppen */
 
   /* 404 Page */
   .div-404 {
-    height: auto;
     flex-direction: column;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+  }
+  .div-404 img {
+    width: 320px;
   }
 
   /* ABOUT PAGE */
